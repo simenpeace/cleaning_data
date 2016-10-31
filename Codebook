@@ -1,3 +1,69 @@
+
+Introduction
+
+This code book describes the variables, the data, and transformations performed to clean up data generated from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years where each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) while wearing a smartphone (Samsung Galaxy S II) on the waist. The samrtphone using its embedded accelerometer and gyroscope was used to capture the raw data (3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz) generated in the experiments. The obtained dataset is randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. A full description is available at the site where the data was obtained:
+
+
+
+Raw Data
+
+The raw data was given to us in a zip file
+
+Description
+
+The dataset includes the following files (as described in 'README.txt' included in the dataset):
+
+'README.txt': Gives the description of the files and data available in the dataset
+'features_info.txt': Shows variables information used on the features variable
+'features.txt': Shows a list of all features.
+'activity_labels.txt': Links the class labels with their activity name.
+'train/X_train.txt': Training set.
+'train/y_train.txt': Training labels.
+'test/X_test.txt': Test set.
+'test/y_test.txt': Test labels.
+
+Cleaning the raw data was done using through  run_analysis.R in this repository
+
+The script does the following:
+
+Merges the training and the test sets to create one data set using:
+
+rbind()
+
+Extracts only the measurements on the mean and standard deviation for each measurement using:
+grep()
+
+Uses descriptive activity names to name the activities in the data set using:
+read.table()
+
+Appropriately labels the data set with descriptive variable names using:
+names()
+
+Creates a second, independent tidy data 
+
+aggregate()
+write.table()
+
+The scripts will display the tidy set.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The purpose of this code book is to describe the variables that I've used in my R code.
  Variable:
  
